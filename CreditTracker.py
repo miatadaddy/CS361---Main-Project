@@ -22,12 +22,12 @@ def add_card():
     balance = input("Card Balance: $")
     if balance.lower() == "b":
         return
-    balance = float(balance_input)
+    balance = float(balance)
 
     limit = input("Credit Limit: $")
     if limit.lower() == "b":
         return
-    limit = float(limit_input)
+    limit = float(limit)
 
     card = {
         "name": name,
