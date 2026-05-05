@@ -12,10 +12,22 @@ def add_card():
     print("(takes just a few seconds and requires manual input)")
     print("*" * 59)
 
+    print("\nInput B and press Enter during any input to return\n")
     name = input("Card Nickname: ")
+    if name.lower() == "back":
+        return
     last4 = input("Last 4 of Card #: ")
-    balance = float(input("Card Balance: "))
-    limit = float(input("Credit Limit: "))
+    if last4.lower() == "back":
+        return
+    balance = input("Card Balance: $")
+    if balance_input.lower() == "back":
+        return
+    balance = float(balance_input)
+
+    limit = input("Credit Limit: $")
+    if limit_input.lower() == "back":
+        return
+    limit = float(limit_input)
 
     card = {
         "name": name,
